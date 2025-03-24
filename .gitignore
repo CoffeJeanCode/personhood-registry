@@ -1,0 +1,59 @@
+# Logs
+logs/
+*.log
+
+# Compiled class files
+*.class
+
+# Spring Boot specific
+*.jar
+*.war
+*.ear
+
+# Maven & Gradle
+/.mvn/
+/.gradle/
+!**/src/main/**/.mvn
+!**/src/main/**/.gradle
+**/target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# IDEs and Editors
+/.idea/
+.vscode/
+*.iml
+*.swp
+*.iws
+*.ipr
+*.classpath
+*.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Environment variables
+.env
+
+# Database
+*.sql
+*.db
+**/mysql_data/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+HELP.md

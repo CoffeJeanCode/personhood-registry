@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Personeria</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <main class="container mx-auto p-5">
+    <h1 class="text-4xl font-bold text-center my-10">Registro de Usuarios</h1>
+
+    <form action="" class="max-w-sm mx-auto">
+      <div class="mb-5">
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Nombres</label>
+        <input type="text" id="name" autofocus
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-4 focus:outline-none focus:ring-gray-200  block w-full p-2.5"
+          required />
+      </div>
+      <div class="mb-5">
+        <label for="sorenames" class="block mb-2 text-sm font-medium text-gray-900">Apellidos</label>
+        <input type="text" id="sorenames" autofocus
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-4 focus:outline-none focus:ring-gray-200  block w-full p-2.5"
+          required />
+      </div>
+      <div class="mb-5">
+        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Teléfono</label>
+        <input type="tel" id="phone" autofocus
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-4 focus:outline-none focus:ring-gray-200  block w-full p-2.5"
+          required />
+      </div>
+      <div class="mb-5">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Correo Electrónico</label>
+        <input type="email" id="email" autofocus
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-4 focus:outline-none focus:ring-gray-200  block w-full p-2.5"
+          required />
+      </div>
+      <div class="mb-5">
+
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Género</label>
+        <select id="countries"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-4 focus:outline-none focus:ring-gray-200  block w-full p-2.5">
+          <option value="">Femenino</option>
+          <option value="">Masculino</option>
+          <option value="">Otro</option>
+        </select>
+      </div>
+
+      <div class="mb-5">
+        <button type="button"
+          class="text-green-700 hover:text-white border border-green-600 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Registrar</button>
+        <button type="button"
+          class="text-gray-700 hover:text-white border border-gray-600 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Restablecer</button>
+      </div>
+      </div>
+    </form>
+
+  </main>
+
+  <div class="max-w-3xl mx-auto p-6 bg-white">
+    <h1 class="text-4xl font-bold mb-4 text-center">Historial de Registro</h1>
+    <div id="userList" class="space-y-4 my-12">
+    </div>
+  </div>
+
+  <script>
+    const users = [
+      { fullName: "Juan Pérez", email: "juan.perez@example.com", gender: "Masculino", dateTime: "2025-03-22 14:30:00" },
+      { fullName: "María Gómez", email: "maria.gomez@example.com", gender: "Femenino", dateTime: "2025-03-21 10:15:00" },
+      { fullName: "Carlos López", email: "carlos.lopez@example.com", gender: "Masculino", dateTime: "2025-03-20 18:45:00" }
+    ];
+
+    const userList = document.getElementById("userList");
+    users.forEach(user => {
+      const card = document.createElement("div");
+      card.classList.add("bg-gray-40", "rounded-sm", "flex", "flex-col", "space-y-4");
+      card.innerHTML = `
+                  <h3 class="text-lg font-semibold text-gray-900">${user.fullName}</h3>
+                  <p class="text-gray-700"><strong>Correo:</strong> ${user.email}</p>
+                  <p class="text-gray-700"><strong>Género:</strong> ${user.gender}</p>
+                  <p class="text-gray-500 text-sm">📅 ${user.dateTime}</p>
+                  <hr class="my-6 h-0.5 border-t-0 bg-neutral-100" />
+              `;
+      userList.appendChild(card);
+    });
+  </script>
+</body>
+
+</html>
