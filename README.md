@@ -17,8 +17,8 @@ Aplicación para hacer un historial de usuarios.
 
 ##### Campos
 
-- Nombres (FirstName)
-- Apellidos (FirstName)
+- Nombres (firstName)
+- Apellidos (lastName)
 - Correo Electrónico (email)
 - Teléfono (phoneNumber)
 - Género (gender)
