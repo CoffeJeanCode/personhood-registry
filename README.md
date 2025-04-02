@@ -1,4 +1,4 @@
-# Proyecto - Registro de Usuarios - Personería
+# Proyecto - Registro de Usuarios
 
 ## Descripción
 
