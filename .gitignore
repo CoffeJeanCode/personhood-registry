@@ -11,8 +11,6 @@ logs/
 *.ear
 
 # Maven & Gradle
-/.mvn/
-/.gradle/
 !**/src/main/**/.mvn
 !**/src/main/**/.gradle
 **/target/
